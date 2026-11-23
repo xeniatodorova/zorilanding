@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zori Coffee | Neighbourhood coffee bar</title>
+  <meta name="description" content="Zori Coffee: freshly roasted espresso, filter coffee and pastries. Open daily from 7:30.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#top">Zori</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="#menu">Menu</a>
+      <a href="#pick">Pick a brew</a>
+      <a href="#visit">Visit</a>
+      <a href="#contact" class="btn btn-small">Book a table</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
+          <span class="w"><span style="--i:0">Good</span></span>
+          <span class="w"><span style="--i:1">coffee,</span></span>
+          <span class="w"><span style="--i:2">no</span></span>
+          <span class="w"><span style="--i:3">rush.</span></span>
+        </h1>
+        <p class="hero-copy">Beans roasted every Tuesday, pastries baked at six. Stay for a slow cup or take one for the walk.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn">See the menu</a>
+          <a href="#pick" class="link">Not sure what to order?</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="badge" viewBox="0 0 120 120">
+          <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <text><textPath href="#circ" textLength="272" lengthAdjust="spacing">Roasted every Tuesday * Baked at six * </textPath></text>
+        </svg>
+        <svg class="cup" viewBox="0 0 240 240">
+          <path class="steam s1" d="M95 70 C80 50 110 40 95 20"/>
+          <path class="steam s2" d="M125 75 C110 52 140 42 125 18"/>
+          <path class="steam s3" d="M155 70 C140 50 170 40 155 22"/>
+          <ellipse cx="120" cy="205" rx="95" ry="18" fill="#1b5557"/>
+          <path d="M45 95 H195 V130 C195 175 165 200 120 200 C75 200 45 175 45 130 Z" fill="#fff"/>
+          <path d="M195 108 C235 105 235 160 190 160" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+          <ellipse cx="120" cy="95" rx="75" ry="14" fill="#6b3f26"/>
+          <ellipse cx="120" cy="95" rx="42" ry="7" fill="#8a5535"/>
+        </svg>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Single origin</span><span>Oat milk, always</span><span>Baked at six</span><span>Bring your own cup, save 0.30</span>
+        <span>Single origin</span><span>Oat milk, always</span><span>Baked at six</span><span>Bring your own cup, save 0.30</span>
+      </div>
+    </div>
+
+    <section id="menu" class="section">
+      <h2 class="reveal">Menu</h2>
+      <div class="tabs" role="tablist" aria-label="Menu categories">
+        <button role="tab" aria-selected="true" aria-controls="p-espresso" id="t-espresso">Espresso</button>
+        <button role="tab" aria-selected="false" aria-controls="p-slow" id="t-slow">Slow coffee</button>
+        <button role="tab" aria-selected="false" aria-controls="p-bakery" id="t-bakery">Bakery</button>
+      </div>
+
+      <ul class="panel" id="p-espresso" role="tabpanel" aria-labelledby="t-espresso">
+        <li><div><b>Espresso</b><small>Double shot, caramel finish</small></div><span>2.00</span></li>
+        <li><div><b>Americano</b><small>Espresso with hot water</small></div><span>2.50</span></li>
+        <li><div><b>Cappuccino</b><small>Equal parts espresso, milk and foam</small></div><span>3.00</span></li>
+        <li><div><b>Flat white</b><small>Velvety milk, strong coffee</small></div><span>3.20</span></li>
+      </ul>
+      <ul class="panel" id="p-slow" role="tabpanel" aria-labelledby="t-slow" hidden>
+        <li><div><b>V60 filter</b><small>Ethiopia Guji, notes of peach and jasmine</small></div><span>3.50</span></li>
+        <li><div><b>Cold brew</b><small>Steeped for 16 hours, served over ice</small></div><span>3.80</span></li>
+        <li><div><b>Beans, 250 g</b><small>Whole or ground for your brewer</small></div><span>9.00</span></li>
+      </ul>
+      <ul class="panel" id="p-bakery" role="tabpanel" aria-labelledby="t-bakery" hidden>
+        <li><div><b>Butter croissant</b><small>Laminated over three days</small></div><span>2.20</span></li>
+        <li><div><b>Cardamom bun</b><small>Sticky, spiced, baked at six</small></div><span>2.40</span></li>
+        <li><div><b>Banana bread</b><small>With toasted walnuts</small></div><span>2.80</span></li>
+      </ul>
+    </section>
+
+    <section id="pick" class="pick">
+      <div class="pick-inner">
+        <h2 class="reveal">What kind of morning is it?</h2>
+        <div class="moods">
+          <button data-mood="wake">I need to wake up</button>
+          <button data-mood="slow">Taking it slow</button>
+          <button data-mood="sweet">Something sweet</button>
+        </div>
+        <div class="result" id="result" aria-live="polite">
+          <p>Pick a mood and we will suggest a drink.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="section visit">
+      <div class="reveal">
+        <h2>Visit us</h2>
+        <p>12 Garden Street, Old Town. Two minutes from the tram stop, with bike racks outside.</p>
+      </div>
+      <dl class="hours reveal">
+        <div><dt>Mon to Fri</dt><dd>7:30 to 19:00</dd></div>
+        <div><dt>Saturday</dt><dd>8:30 to 20:00</dd></div>
+        <div><dt>Sunday</dt><dd>9:00 to 17:00</dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2 class="reveal">Book a table</h2>
+      <form id="booking" novalidate>
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label>Guests
+          <select name="guests">
+            <option>1 to 2</option>
+            <option>3 to 4</option>
+            <option>5 or more</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Send request</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Zori Coffee, 12 Garden Street</p>
+    <p>upworkproject@zori.example</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
